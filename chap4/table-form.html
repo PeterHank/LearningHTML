@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head lang = "eng">
+	<meta charset = "utf-8">
+	<title>Table-form</title>
+</head>
+<body>
+	<form id = "testform" >
+		<input type = "submit" name = "sub1" value = "v1" formaction = "s1.jsp">提交到s1	<br/>
+		<input type = "submit" name = "sub2" value = "v2" formaction = "s2.jsp">提交到s2	<br/>
+		<input type = "submit" name = "sub3" value = "v3" formaction = "s3.jsp">提交到s3	<br/>
+	</form>
+	<textarea form = "testform"></textarea>
+	<p>一个新的表单</p>
+	<form id = "testform2" action = "serve.jsp">
+		<input type = "submit" value = "post 方式提交" formmethod = "post">
+		<input type = "submit" value = "get 方式提交" formmethod = "get">
+	</form>
+	<p>又来了一个新的表单</p>
+	<form action = "serve.jsp" method = "post">
+		<input type = "text" name = "name" value = "test"><br />
+		文件：<input type = "file" name = "files">
+		<input type = "submit" value = "上传" formaction = "uploadFile.jsp" formenctype = "multipart/form-data">
+		<input type = "submit" value = "提交">
+	</form>
+	<p>最后一个表单了</p>
+	<form id = "testform3" action = "serve.jsp">
+		<input type = "submit" name = "s1" value = "v1" formaction = "s1.jsp" formtarget = "_top">	<br/>
+		<input type = "submit" name = "s2" value = "v2" formaction = "s2.jsp" formtarget = "_blank">	<br/>
+		<input type = "text" >
+	</form>
+</body>
