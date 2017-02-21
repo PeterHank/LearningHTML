@@ -1,4 +1,4 @@
 <?php
 $name = $_POST['name'];
-echo "<pre>".$name."</pre>;
+echo "<pre>".$name."</pre>";
 ?>
