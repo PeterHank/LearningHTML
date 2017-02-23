@@ -6,8 +6,37 @@
 </head>
 <body>
 	<form action = "test.php" method = "POST">
-		<textarea name = "name" maxlength = 100 rows = 5 wrap = "soft" cols = 5></textarea> 
-		<input type = "submit" value = "提交"/>
+		<!--<textarea name = "name" maxlength = 100 rows = 5 wrap = "soft" cols = 5></textarea> <br/>-->
+		<input type = "url" name = "url1" value = "http://www.baidu.com">	<br/>
+		<input type = "email" name = "email1" value = "zhouhan9212@gmail.com"> <br/>
+		<input type = "date" name = "date1" value = "2010-10-02"> <br/>
+		<input type = "time" name = "time1" value = "10:00">
+		<input type = "submit" value = "提交"/>	<br/>		
 	</form>
+	<p>造一个新的表格</p>
+	<form>
+		<input type = "date" id = "date_box">
+		<input type = "button" value = "点击我" onclick = "alert(document.getElementById('date_box').valueAsNumber)"><br/>
+		<script type = "text/javascript">
+			document.getElementById('date_box').valueAsDate = new Date();
+		</script>
+		<input type = "number" name = "number1" value = "25" max = "55" min = "10" step = "5"><br/>
+		<input type = "range" name = "range1" value = "50" max = "100" min = "0" step = "1"><br/>
+	</form>
+	<p>一个可以做运算的新表单</p>
+	<form>
+		<input type = "number" id = "num1" value = "20" max = "50" min = "10" step = "2"><br/>
+		<input type = "number" id = "num2" value = "30" max = "50" min = "10" step = "3"><br/>
+		<input type = "number" id = "num3" readonly>
+		<input type = "button" value = "求和" onclick = "sum()">
+		<script type = "text/javascript">
+			function sum(){
+				var sum = document.getElementById("num1").valueAsNumber+document.getElementById("num2").valueAsNumber;
+				document.getElementById("num3").valueAsNumber = sum;			
+			}
+
+		</script>
+	</form>
+
 </body>
 </html>
