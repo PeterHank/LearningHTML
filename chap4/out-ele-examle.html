@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang = "eng">
+<head>
+	<meta charset = "utf-8">
+	<title>out 元素示例</title>
+</head>
+<body>
+	<form id = "testform">
+		请选择一个数值：
+		<input id = "range1" type = "range" min=0; max = 100 step = 2 value = 10 onchange = "value_change()"/>
+		<output id = "output1">10</output>
+	</form>
+	<script type = "text/javascript">
+		function value_change(){
+			var number = document.getElementById("range1").value;
+			document.getElementById("output1").value = number;
+		}
+	</script>
+	
+</body>
+</html>
